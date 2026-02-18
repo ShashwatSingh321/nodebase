@@ -5,7 +5,7 @@ import { auth } from "./auth";
 
 export const requireAuth = async () => {
   const session = await auth.api.getSession({
-    headers: headers(),
+    headers: await headers(),
   });
 
   if (!session) {
@@ -18,7 +18,7 @@ export const requireAuth = async () => {
 
 export const requireUnauth = async () => {
   const session = await auth.api.getSession({
-    headers: headers(),
+    headers: await headers(),
   });
 
   if (session) {
