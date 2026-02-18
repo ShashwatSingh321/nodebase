@@ -8,7 +8,7 @@ import { encrypt } from "@/lib/encryption";
 export const credentialsRouter = createTRPCRouter({
 
   // CREATE
- create: protectedProcedure
+ create: premiumProcedure
  .input(
   z.object({
     name: z.string().min(1, "Name is required"),
