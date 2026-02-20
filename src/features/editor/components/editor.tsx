@@ -102,11 +102,10 @@ const hasManualTrigger = useMemo(() => {
     <Panel position = "top-right">
       <AddNodeButton/>
     </Panel>
-    {hasManualTrigger && (
+    
   <Panel position="bottom-center">
     <ExecuteWorkflowButton workflowId={workflowId} />
   </Panel>
-)}
   </ReactFlow>
 </div>
 
